@@ -1,9 +1,10 @@
 name: Workflow Dispatch
-push:
+on:
+  push:
     branches:
       - main
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-       - run: curl -XPOST -u "${{secrets.sirganya}}:${{secrets.workflow_dispatch}}" -H "Accept: application/vnd.github.everest-preview+json" -H "Content-Type: application/json" https://api.github.com/repos/sirganya/local-ui/actions/workflows/build.yaml/dispatches --data '{"ref": "master"}' 
+       - run: curl -XPOST -u "${{secrets.sirganya}}:${{secrets.workflow_dispatch}}" -H "Accept:application/vnd.github.everest-preview+json" -H "Content-Type:application/json" https://api.github.com/repos/sirganya/local-ui/actions/workflows/build.yaml/dispatches --data '{"ref":"master"}' 
