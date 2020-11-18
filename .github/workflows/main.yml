@@ -1,4 +1,4 @@
-name: Workfloe Dispatch
+name: Workflow Dispatch
 on:
   release:
     types: [created]
